@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+/* We wanted to create a page consisting of three rows: a header, main and footer. 
+    We used a grid to divide it according to our preferred size.
+    In addition, we thought it would be nice to use a soothing background image that resulted in this image. */
 body {
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
@@ -86,6 +89,11 @@ li {
 }
 
 /* Drop menu */
+/*  The reason why a drop menu was created is because the normal nav is not responsive for smaller screens. 
+    Because of this, our solution was to create a drop menu. For this we have chosen to display a drop menu 
+    once the normal nav and logo are close together and then set the normal nav to display: none. The drop menu 
+    will then appear on the top right side of the page so that you can still see much of the main content. It was 
+    also important to add a backdrop filter so that all main content under the drop menu is not visible, which makes the drop menu easier to read. */
 .drop-menu {
     display: none;
     position: absolute;
@@ -138,6 +146,7 @@ li {
 /* ------------------------------- */
 /* PORTFOLIO */
 
+/* Te page contains out two section that that must be next to each other. */
 .main-container-portfolio {
     display: flex;
     justify-content: space-evenly;
@@ -202,6 +211,7 @@ li {
 /* RESPONSIVENESS NAV/DROPMENU & PROFILE PORTFOLIO 1300px */
 body {
     @media (max-width: 1300px) {
+        /* When the normal nav and logo are close together, we don't want to see the normal nav anymore */
         .nav-links {
             display: none;
         }
@@ -212,6 +222,7 @@ body {
     }
 
     @media (max-width: 790px) {
+        /* The big profile picture and the text make the page not responsive at this width, so the content in the container has to change to flex-direction column instead of row. */
         .main-container-portfolio {
             display: flex;
             flex-direction: column;
@@ -222,13 +233,15 @@ body {
         .container-profile-picture {
             text-align-last: center;
         }
-    
+        
+        /* Instead of having the drop menu at the top right of the page, we have to change it to the middle and put the width on unset at this width. */
         .drop-menu {
             top: 7rem;
             left: 2rem;
             width: unset;
         }
-    
+        
+        /* A smaller profile picture looks a bit better at this width. */
         .profile-picture {
             width: 290px;
             height: 290px;
@@ -239,6 +252,7 @@ body {
 
 /* LOGIN CSS */
 
+/* Put the content in the middle of the main. */
 .main-container-login {
     display: flex;
     justify-content: center;
@@ -246,7 +260,8 @@ body {
     margin-top: 5rem;
 }
 
-
+/* We wanted to create a nice white form that matches the background image and all content should be underneath each other. 
+   We also made some minor changes such as giving the form a small border-radius, centering text to make it look a little neater, and adding a small shadow. */
 .login-form {
     background-color: #FFFFFF;
     height: 500px;
@@ -262,6 +277,7 @@ body {
 
 }
 
+/* Change the gap between the two password inputs */
 .container-user-password {
     display: flex;
     flex-direction: column;
@@ -311,7 +327,6 @@ body {
     border-radius: 5px;
     transition: border-color 0.3s;
     font-weight: bold;
-
 }
 
 .username-style:focus::placeholder,
@@ -350,6 +365,8 @@ body {
 /* ----------------------------------------------------- */
 
 /* REGISTRATION */
+/* We wanted to create a nice white form that matches the background image and all content should be underneath each other. 
+   We also made some minor changes such as giving the form a small border-radius, centering text to make it look a little neater, and adding a small shadow. */
 .registration-form {
     background-color: #FFFFFF;
     height: 500px;
@@ -453,6 +470,9 @@ body {
 
 }
 
+/* We wanted to create a nice white form that matches the background image and all content should be underneath each other. 
+   We also made some minor changes such as giving the form a small border-radius, centering text to make it look a little neater, and adding a small shadow. 
+   Finally, we aldo created a new grid in the form so that we could more easily create 2 columns for an aside and a section.*/
 .my-account-form {
     background-color: #FFFFFF;
     height: 650px;
@@ -511,6 +531,7 @@ body {
     width: 70%;
 }
 
+/* The message has to show on top of the page while being horizontally in the middle. */
 .session-message {
     position: absolute;
     top: 7rem;
@@ -520,6 +541,7 @@ body {
 }
 
 /* MY ACCOUNT PROFILE */
+/* The profile picture needs te same width and height, otherwise it won't be fully round. */
 #change-profile-picture {
     width: 200px;
     height: 200px;
