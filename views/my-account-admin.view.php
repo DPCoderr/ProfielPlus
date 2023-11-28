@@ -8,6 +8,8 @@
 <?php require 'partials/header.php';?>
 
     <!-- Main -->
+    <!-- Based on the login form, I also more or less used it for the my-account pages, but I had to change the width and length so that everything would still fit. 
+         All my-account pages have an aside on the left with unordered hyperlink lists so that you can go to the correct page to view or change your data. And that data is next to it (right side) in the section. -->
     <main>
         <?php 
             // Go back to the index page when you're NOT logged in.
@@ -43,6 +45,7 @@
                 </aside>
                 
                 <section class="data-my-account"> 
+                    <!-- Everything (text, label, inputs) just stacked underneath each other; nothing special about it. -->
                     <h1>My Account</h1>
                     <h4><u>Admin</u></h4>
                     <label for="username">Delete User:</label>

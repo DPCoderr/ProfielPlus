@@ -8,6 +8,8 @@
 <?php require 'partials/header.php';?>
 
     <!-- Main -->
+    <!-- Based on the login form, I also more or less used it for the my-account pages, but I had to change the width and length so that everything would still fit. 
+    All my-account pages have an aside on the left with unordered hyperlink lists so that you can go to the correct page to view or change your data. And that data is next to it (right side) in the section. -->
     <main>
         <?php 
             // Go back to the index page when you're NOT logged in.
@@ -28,7 +30,6 @@
         ?>
         <div class="main-container-my-account">
             <form method="post" action="update-my-account.php" class="my-account-form">
-                <!-- <h1 class="header-text-login">My Account</h1> -->
                 
                 <aside class="aside-my-account">
                     <ul class="nav-aside-my-account">
@@ -38,7 +39,8 @@
                         <li><a class="<?= ($_SERVER['REQUEST_URI'] == '/my-account-hobbies' ? 'active' : ''); ?>" href="/my-account-hobbies">Hobbies</a></li>
                         <li><a class="<?= ($_SERVER['REQUEST_URI'] == '/my-account-education' ? 'active' : ''); ?>" href="/my-account-education">Education</a></li>
                         <li><a class="<?= ($_SERVER['REQUEST_URI'] == '/my-account-workexp' ? 'active' : ''); ?>" href="/my-account-workexp">Work experience</a></li>
-                        <!-- Only for the admin (user_id = 9 in our database) -->
+                        
+                        <!-- Only for the admin (user_id = 9 in our database). -->
                         <?php 
                             if ($_SESSION['user_id'] == 9) {
                                 echo "<li><a class='(". $_SERVER['REQUEST_URI'] . "== '/my-account-admin' ? 'active' : '')' href='/my-account-admin'>Admin</a></li>";
@@ -49,6 +51,7 @@
                 </aside>
                 
                 <section class="data-my-account">
+                    <!-- Everything (text, label, inputs) just stacked underneath each other. -->
                     <h1 class="header-text-my-account">My Account</h1>
                     <h4><u>General</u></h4>
 

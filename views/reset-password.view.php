@@ -5,6 +5,9 @@
 <?php require 'partials/header.php'; ?>
     
     <!-- Main -->
+    <!-- For the reset password form I used the same layout as the login, where the form is easy to read due to its white background 
+    and is divided into four parts one below the other. On this page I have also put a token in a hidden input so that I can use it to control the user in the database. 
+    I also thought it looked nicer to put the two password inputs closer together, so I put them in a div to reduce the gap. -->
     <main>
         <div class="main-container-login">
             <form action="reset-password.php" class="login-form" method="post">

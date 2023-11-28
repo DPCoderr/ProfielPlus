@@ -5,6 +5,9 @@
 <?php require 'views/partials/header.php';?>
 
     <!-- Main --> 
+    <!-- It's a simple layout of a section with 2 parts underneath each other: 
+         header and two buttons (that navigate to another page) next to each other 
+         by placing them in a div and then changing the flex direction to row. -->
     <main>
         <?php
             // Welcome message.

@@ -8,6 +8,8 @@
 <?php require 'partials/header.php';?>
 
     <!-- Main -->
+    <!-- Based on the login form, I also more or less used it for the my-account pages, but I had to change the width and length so that everything would still fit. 
+         All my-account pages have an aside on the left with unordered hyperlink lists so that you can go to the correct page to view or change your data. And that data is next to it (right side) in the section. -->
     <main>
         <?php 
             // Go back to the index page when you're NOT logged in.
@@ -44,7 +46,9 @@
                 <section class="data-my-account">                    
                     <h1>My Account</h1>
                     <h4><u>Profile</u></h4>
-                    <h5>Change Profile Page:</h5>                 
+                    <h5>Change Profile Page:</h5>   
+                    
+                    <!-- Check if the user has a default profile picture or not. -->
                     <?php
                         if ($profile['profile_image'] != NULL){
                             echo "<img src='data:image/jpeg;base64," . $profileImage . "' id='change-profile-picture' alt='Profile Picture'>";
@@ -52,6 +56,9 @@
                             echo "<img src='images\Default_pfp.svg.png' id='change-profile-picture' alt='Profile Picture'>";
                         }                       
                     ?>
+                    <!-- For this section, almost everything was the same as with the other my-account pages. 
+                         However, I liked it better that the file input of the photo and its label are next to each other. 
+                         For that I put them in a div to change the flex direction to row. -->
                     <section class="container-label-input-profile">
                         <label for="change-profile-picture">Choose image to upload</label>
                         <input type="file" id="change-profile-picture-file" name="profile-picture" accept="image/*">

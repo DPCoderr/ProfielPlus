@@ -5,6 +5,9 @@
 <?php require 'partials/header.php';?>
 
     <!-- Main -->
+    <!-- I used a white form for the login so that it can be clearly seen with the background image. 
+    Instead of putting everything together at the same time, I thought that there should be more of a gap 
+    with certain parts than with other parts and that some parts should be next to each other. As a result, I created several divs. -->
     <main>
         <?php 
             // Go back to the index page when you're logged in.

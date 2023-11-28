@@ -15,11 +15,15 @@
 <?php require 'partials/header-profile.php';?>
 
     <!-- Main -->
+    <!-- 
+        On this page I wanted to convey a profile in a simple but clean way. 
+        I have created 2 sections, with aprofile photo on the left and the standard text on the right (name, function and buttons that navigate you to one of user's pages).
+        For the profile photo section I chose to choose a standard profile photo if you have not uploaded anything yourself yet. Once you've done that through My Account, your uploaded profile photo will appear in the image tag.
+        For the text section I use the user's database data that he/she set when creating the account or changing data in 'My Account'. I then put everything below each other and I also created a div in it so that the buttons can be next to each other. -->
     <main>
         <div class="main-container-portfolio">
             <section class="container-profile-picture">
                 <?php
-                    // die(var_dump($_SESSION['profileUserId']));
                     if ($profile['profile_image'] != NULL){
                         echo "<img src='data:image/jpeg;base64," . $profileImage . "' class='profile-picture' alt='profile Picture'>";
                     } else {

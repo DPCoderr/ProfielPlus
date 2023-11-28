@@ -16,6 +16,9 @@
     <?php require 'select-profiles.php';?>
 
     <!-- Main -->
+    <!-- This page was outside my scope of tasks, but it was important to eventually see a profile, 
+    so I quickly created it without paying attention to the css. It is a simple layout of unordered 
+    lists of names one below the other on which you can click on his/her profile. -->
     <main>
         <div class="main-container-profiles">
             <?php

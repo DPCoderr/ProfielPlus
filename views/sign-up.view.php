@@ -18,6 +18,10 @@
     ?>
 
     <!-- Main -->
+    <!-- For the account creation form I used the same layout as for the login, where the white background makes the form easy to read and is divided into three parts. 
+    The special (or confusing) thing about this page is that I used two sections on one page of which only one should be visible, which is done by clicking the previous 
+    or next button to switch through the tabs. In that section there are three parts below each other (header text, four inputs and a div for the prev/next/submit button. 
+    The reason why I put the buttons in a div is because I can then put them next to each other instead of below each other. -->
     <main>
         <div class="main-container-login">
             <form action="add-user.php" class="registration-form" method="post">
